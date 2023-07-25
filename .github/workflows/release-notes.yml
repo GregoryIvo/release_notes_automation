@@ -39,9 +39,9 @@ jobs:
     - name: Files exist
       id: get-old-text
       if: steps.check_files.outputs.exists == 'true'
-      run: "echo \"description=\
+      run: "| echo \"description=\
               $(awk '/Description:/ {found=1; next} /^$/ {found=0} found {print}' RELEASE_NOTES.txt)\" >> \"${GITHUB_OUTPUT}\""
-      run: "echo \"target-enviroment=\
+      run: "| echo \"target-enviroment=\
               $(awk '/Target Environments:/ {found=1; next} /^$/ {found=0} found {print}' RELEASE_NOTES.txt)\" >> \"${GITHUB_OUTPUT}\""
       run: "echo \"known-issues=\
               $(awk '/Known Issues:/ {found=1; next} /^$/ {found=0} found {print}' RELEASE_NOTES.txt)\" >> \"${GITHUB_OUTPUT}\""
@@ -71,9 +71,9 @@ jobs:
       id: get-description
       if: steps.check_files.outputs.exists == 'true'
       # Only runs if all of the files exist
-      run: sed -i '0,/\[WIP\]/s//${{ steps.get-old-text.outputs.description }}/' RELEASE_NOTES.txt
-      run: sed -i '0,/\[WIP\]/s//${{ steps.get-old-text.outputs.target-enviroment }}/' RELEASE_NOTES.txt
-      run: sed -i '0,/\[WIP\]/s//${{ steps.get-old-text.outputs.known-issues }}/' RELEASE_NOTES.txt
+      run: "| sed -i '0,/\[WIP\]/s//${{ steps.get-old-text.outputs.description }}/' RELEASE_NOTES.txt"
+      run: "| sed -i '0,/\[WIP\]/s//${{ steps.get-old-text.outputs.target-enviroment }}/' RELEASE_NOTES.txt"
+      run: "sed -i '0,/\[WIP\]/s//${{ steps.get-old-text.outputs.known-issues }}/' RELEASE_NOTES.txt"
 
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
