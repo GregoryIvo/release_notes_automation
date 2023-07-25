@@ -71,9 +71,9 @@ jobs:
       id: get-description
       if: steps.check_files.outputs.exists == 'true'
       # Only runs if all of the files exist
-      run: "| sed -i '0,/\[WIP\]/s//${{ steps.get-old-text.outputs.description }}/' RELEASE_NOTES.txt"
-      run: "| sed -i '0,/\[WIP\]/s//${{ steps.get-old-text.outputs.target-enviroment }}/' RELEASE_NOTES.txt"
-      run: "sed -i '0,/\[WIP\]/s//${{ steps.get-old-text.outputs.known-issues }}/' RELEASE_NOTES.txt"
+      run: "| sed -i '0,/\\[WIP\\]/s//${{ steps.get-old-text.outputs.description }}/' RELEASE_NOTES.txt"
+      run: "| sed -i '0,/\\[WIP\\]/s//${{ steps.get-old-text.outputs.target-enviroment }}/' RELEASE_NOTES.txt"
+      run: "sed -i '0,/\\[WIP\\]/s//${{ steps.get-old-text.outputs.known-issues }}/' RELEASE_NOTES.txt"
 
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
