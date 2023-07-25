@@ -34,7 +34,7 @@ jobs:
       id: check_files
       uses: thebinaryfelix/check-file-existence-action@v1
       with:
-        files: 'package.json, LICENSE, README.md'
+        files: 'RELEASE_NOTES.txt'
 
     - name: Files exist
       id: get-old-text
