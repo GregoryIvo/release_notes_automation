@@ -11,6 +11,12 @@ This service release of Eclipse Kura includes the following changes:
 
 
 Features:
+  * 831158d06b - added a random feature 2 (G_Ivo)
+  * 78bb9712c4 - added a random feature 6 (G_Ivo)
+  * 6c71d13190 - added a random feature (G_Ivo)
+  * 64e69df18b - added a random feature 4 (G_Ivo)
+  * 37eccebb98 - added a random feature 5 (G_Ivo)
+  * 31f5e6ded2 - added a random feature 3 (G_Ivo)
   * 9313b50b53 - first time setup workflow (#56) (Mattia Dal Ben)
   * 9c4f221c05 - update release notes action dependency (Mattia Dal Ben)
 
@@ -26,6 +32,9 @@ Target Environments:
  Kura is also available as a pre-built Docker container for Ubi 8 and Alpine
 
 Bug Fixes:
+  * 681554ab55 - version error release notes (G_Ivo)
+  * 964a492ce0 - release ntoest update (G_Ivo)
+  * 03946a4bba - update workflow file (G_Ivo)
   * 05b8beab56 - forgotten line (Mattia Dal Ben)
 
 Target Platform Updates:
@@ -82,6 +91,18 @@ Known Issues:
   * #222:  CloudConnectionStatusServiceImpl does not cancel workers on component deactivation
 
 Changelog:
+  * 681554ab55 - version error release notes (G_Ivo)
+  * 964a492ce0 - release ntoest update (G_Ivo)
+  * 03946a4bba - update workflow file (G_Ivo)
+  * 831158d06b - added a random feature 2 (G_Ivo)
+  * 78bb9712c4 - added a random feature 6 (G_Ivo)
+  * 6c71d13190 - added a random feature (G_Ivo)
+  * 64e69df18b - added a random feature 4 (G_Ivo)
+  * 37eccebb98 - added a random feature 5 (G_Ivo)
+  * 31f5e6ded2 - added a random feature 3 (G_Ivo)
+  * 83e0322610 -  (G_Ivo)
+  * 33d792ea0e -  (G_Ivo)
+  * e677788d90 - add Project 1.0.1 release notes (GregoryIvo)
   * 73404b94d8 - update release notes workflow (Mattia Dal Ben)
   * 3d306bb8a1 - add pom.xml (Mattia Dal Ben)
   * 87506a922a -  (Mattia Dal Ben)
