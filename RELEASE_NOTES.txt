@@ -1,7 +1,7 @@
 Project Name - 1.0.1 - July 2023
 -------------------------------------------------------------------------------------------------
 Description:
-[WIP]
+AIJDFAJKLSDHFUIALFHJLADHFLA8UIFHwjk,efsdhuijfgvnajklsdfhuk;weruioa;yfgheasdjk.hasdf
 
 
 Features:
@@ -9,7 +9,7 @@ Features:
   * 9c4f221c05 - update release notes action dependency (Mattia Dal Ben)
 
 Target Environments:
-[WIP]
+sjadhGLAJKSDFHASJKLFHASDJKLFASKLD;FJASDFASDFSD 
 
 Bug Fixes:
   * 05b8beab56 - forgotten line (Mattia Dal Ben)
@@ -18,7 +18,7 @@ Target Platform Updates:
   * 3d306bb8a1 - add pom.xml (Mattia Dal Ben)
 
 Known Issues:
-[WIP]
+FJKASDHFJKL;ASHFJKLASHFKLJASDHFJKLHDJKFHASDJKFHWEUIOLFHJKwenuiflhweas89opwefwiedjkFH
 
 Changelog:
   * 73404b94d8 - update release notes workflow (Mattia Dal Ben)
