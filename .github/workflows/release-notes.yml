@@ -40,9 +40,9 @@ jobs:
       id: get-old-text
       if: steps.check_files.outputs.exists == 'true'
       run: |
-        echo "awk '/Description:/ {found=1; next} /^$/ {found=0} found {print}' RELEASE_NOTES.txt" > description.txt"
-        echo "awk '/Target Environments:/ {found=1; next} /^$/ {found=0} found {print}' RELEASE_NOTES.txt" > target-env.txt"
-        echo "awk '/Known Issues:/ {found=1; next} /^$/ {found=0} found {print}' RELEASE_NOTES.txt" > "known-issues.txt"
+        awk '/Description:/ {found=1; next} /^$/ {found=0} found {print}' RELEASE_NOTES.txt > description.txt
+        awk '/Target Environments:/ {found=1; next} /^$/ {found=0} found {print}' RELEASE_NOTES.txt > target-env.txt
+        awk '/Known Issues:/ {found=1; next} /^$/ {found=0} found {print}' RELEASE_NOTES.txt > known-issues.txt
       shell: bash
 
     - name: Download git-changelog-command-line tool
