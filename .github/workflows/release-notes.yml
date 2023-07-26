@@ -70,9 +70,9 @@ jobs:
       if: steps.check_files.outputs.exists == 'true'
       # Only runs if all of the files exist
       run: |
-        sed -i '0,/\[WIP\]/s//$(cat description.txt)/' RELEASE_NOTES.txt
-        sed -i '0,/\[WIP\]/s//$(cat target-env.txt)/' RELEASE_NOTES.txt
-        sed -i '0,/\[WIP\]/s//$(cat known-issues.txt)/' RELEASE_NOTES.txt
+        sed -i '0,#\[WIP\#,s##$(cat description.txt)#' RELEASE_NOTES.txt
+        sed -i '0,#\[WIP\#,s##$(cat target-env.txt)#' RELEASE_NOTES.txt
+        sed -i '0,#\[WIP\#,s##$(cat known-issues.txt)#' RELEASE_NOTES.txt
         
     - name: Files exist clean up
       id: clean-up-files
