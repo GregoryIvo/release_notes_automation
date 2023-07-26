@@ -75,7 +75,7 @@ jobs:
         sed -i '0,/\[WIP\]/s//$(cat known-issues.txt)/' RELEASE_NOTES.txt
         
     - name: Files exist clean up
-      id: get-description
+      id: clean-up-files
       if: steps.check_files.outputs.exists == 'true'
       # Only runs if all of the files exist
       run: |
