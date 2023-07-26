@@ -70,9 +70,9 @@ jobs:
       if: steps.check_files.outputs.exists == 'true'
       # Only runs if all of the files exist
       run: |
-          sed -i "0,/\[WIP\]/ s/\[WIP\]/$(cat -E description.txt | tr -d '\n')/; s/\\$/\n/g" RELEASE_NOTES.txt
-          sed -i "0,/\[WIP\]/ s/\[WIP\]/$(cat -E target-env.txt | tr -d '\n')/; s/\\$/\n/g" RELEASE_NOTES.txt
-          sed -i "0,/\[WIP\]/ s/\[WIP\]/$(cat -E known-issues.txt | tr -d '\n')/; s/\\$/\n/g" RELEASE_NOTES.txt
+          awk 'NR==FNR { desc = (desc == "" ? $0 : desc "\n" $0); next } /\[WIP\]/ && !done { sub(/\[WIP\]/, desc); done=1 } 1' description.txt done=0 RELEASE_NOTES.txt > tmpfile && mv tmpfile RELEASE_NOTES.txt
+          awk 'NR==FNR { desc = (desc == "" ? $0 : desc "\n" $0); next } /\[WIP\]/ && !done { sub(/\[WIP\]/, desc); done=1 } 1' target-env.txt done=0 RELEASE_NOTES.txt > tmpfile && mv tmpfile RELEASE_NOTES.txt
+          awk 'NR==FNR { desc = (desc == "" ? $0 : desc "\n" $0); next } /\[WIP\]/ && !done { sub(/\[WIP\]/, desc); done=1 } 1' known-issues.txt done=0 RELEASE_NOTES.txt > tmpfile && mv tmpfile RELEASE_NOTES.txt
       shell: bash
         
     - name: Files exist clean up
