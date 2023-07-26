@@ -73,6 +73,7 @@ jobs:
           sed -i "0,/\[WIP\]/ s/\[WIP\]/$(cat -E description.txt | tr -d '\n')/; s/\\$/\n/g" RELEASE_NOTES.txt
           sed -i "0,/\[WIP\]/ s/\[WIP\]/$(cat -E target-env.txt | tr -d '\n')/; s/\\$/\n/g" RELEASE_NOTES.txt
           sed -i "0,/\[WIP\]/ s/\[WIP\]/$(cat -E known-issues.txt | tr -d '\n')/; s/\\$/\n/g" RELEASE_NOTES.txt
+      shell: bash
         
     - name: Files exist clean up
       id: clean-up-files
