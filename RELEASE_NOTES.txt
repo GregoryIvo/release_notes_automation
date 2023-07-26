@@ -11,6 +11,13 @@ This service release of Eclipse Kura includes the following changes:
 
 
 Features:
+  * 94cf4c21c4 - separated steps (G_Ivo)
+  * 831158d06b - added a random feature 2 (G_Ivo)
+  * 78bb9712c4 - added a random feature 6 (G_Ivo)
+  * 6c71d13190 - added a random feature (G_Ivo)
+  * 64e69df18b - added a random feature 4 (G_Ivo)
+  * 37eccebb98 - added a random feature 5 (G_Ivo)
+  * 31f5e6ded2 - added a random feature 3 (G_Ivo)
   * 9313b50b53 - first time setup workflow (#56) (Mattia Dal Ben)
   * 9c4f221c05 - update release notes action dependency (Mattia Dal Ben)
 
@@ -26,6 +33,25 @@ Target Environments:
  Kura is also available as a pre-built Docker container for Ubi 8 and Alpine
 
 Bug Fixes:
+  * 63a093e9ab - replace sed with awk (G_Ivo)
+  * f87cb32b6f - specify shell (G_Ivo)
+  * 77c408f584 - final battle with sed (G_Ivo)
+  * 3987d9a333 - sed again (G_Ivo)
+  * 416e3d27ac - sed (G_Ivo)
+  * 9ba128fb44 - trying to tame the sed beast (G_Ivo)
+  * 4a1fa94e42 - command substitution (G_Ivo)
+  * 291f217b41 - changed-id (G_Ivo)
+  * 6edd736f8f - piped out text to a file, and then delete to fix github issue (G_Ivo)
+  * f9d2c6f8a8 - random fix 6 (G_Ivo)
+  * f7d2dcf7c5 - random fix 2 (G_Ivo)
+  * 6cb969a2d6 - random fix 6 (G_Ivo)
+  * 583acb4175 - random fix 5 (G_Ivo)
+  * 48937a58e0 - random fix 4 (G_Ivo)
+  * 1b1cb0ce24 - random fix 3 (G_Ivo)
+  * 19f3c56253 - random fix 1 (G_Ivo)
+  * 681554ab55 - version error release notes (G_Ivo)
+  * 964a492ce0 - release ntoest update (G_Ivo)
+  * 03946a4bba - update workflow file (G_Ivo)
   * 05b8beab56 - forgotten line (Mattia Dal Ben)
 
 Target Platform Updates:
@@ -82,6 +108,37 @@ Known Issues:
   * #222:  CloudConnectionStatusServiceImpl does not cancel workers on component deactivation
 
 Changelog:
+  * 63a093e9ab - replace sed with awk (G_Ivo)
+  * f87cb32b6f - specify shell (G_Ivo)
+  * 77c408f584 - final battle with sed (G_Ivo)
+  * 3987d9a333 - sed again (G_Ivo)
+  * 416e3d27ac - sed (G_Ivo)
+  * 9ba128fb44 - trying to tame the sed beast (G_Ivo)
+  * 4a1fa94e42 - command substitution (G_Ivo)
+  * 99312fd389 - syntax (G_Ivo)
+  * 291f217b41 - changed-id (G_Ivo)
+  * 94cf4c21c4 - separated steps (G_Ivo)
+  * 6edd736f8f - piped out text to a file, and then delete to fix github issue (G_Ivo)
+  * f9d2c6f8a8 - random fix 6 (G_Ivo)
+  * f7d2dcf7c5 - random fix 2 (G_Ivo)
+  * 6cb969a2d6 - random fix 6 (G_Ivo)
+  * 583acb4175 - random fix 5 (G_Ivo)
+  * 48937a58e0 - random fix 4 (G_Ivo)
+  * 1b1cb0ce24 - random fix 3 (G_Ivo)
+  * 19f3c56253 - random fix 1 (G_Ivo)
+  * cb61805879 - update release notes (G_Ivo)
+  * 681554ab55 - version error release notes (G_Ivo)
+  * 964a492ce0 - release ntoest update (G_Ivo)
+  * 03946a4bba - update workflow file (G_Ivo)
+  * 831158d06b - added a random feature 2 (G_Ivo)
+  * 78bb9712c4 - added a random feature 6 (G_Ivo)
+  * 6c71d13190 - added a random feature (G_Ivo)
+  * 64e69df18b - added a random feature 4 (G_Ivo)
+  * 37eccebb98 - added a random feature 5 (G_Ivo)
+  * 31f5e6ded2 - added a random feature 3 (G_Ivo)
+  * 83e0322610 -  (G_Ivo)
+  * 33d792ea0e -  (G_Ivo)
+  * e677788d90 - add Project 1.0.1 release notes (GregoryIvo)
   * 73404b94d8 - update release notes workflow (Mattia Dal Ben)
   * 3d306bb8a1 - add pom.xml (Mattia Dal Ben)
   * 87506a922a -  (Mattia Dal Ben)
