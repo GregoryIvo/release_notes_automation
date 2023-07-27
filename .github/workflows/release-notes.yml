@@ -7,7 +7,11 @@ on:
           type: string
           description: Commit from which to start generating the Release Notes (non-inclusive)
           required: true
-
+        overwrite:
+          type: boolean
+          description: Overwrite the content of the release notes (typically needed for RC1 notes)
+          required: true
+          default: false
 jobs:
   main:
     name: Generate Release Notes
@@ -38,7 +42,7 @@ jobs:
 
     - name: Files exist
       id: get-old-text
-      if: steps.check_files.outputs.exists == 'true'
+      if: steps.check_files.outputs.exists == 'true' && github.event.inputs.overwrite == false
       run: |
         awk '/Description:/ {found=1; next} /^$/ {found=0} found {print}' RELEASE_NOTES.txt > description.txt
         awk '/Target Environments:/ {found=1; next} /^$/ {found=0} found {print}' RELEASE_NOTES.txt > target-env.txt
@@ -67,17 +71,17 @@ jobs:
     
     - name: Files exist write description
       id: get-description
-      if: steps.check_files.outputs.exists == 'true'
+      if: steps.check_files.outputs.exists == 'true' && github.event.inputs.overwrite == false
       # Only runs if all of the files exist
       run: |
-          awk 'NR==FNR { desc = (desc == "" ? $0 : desc "\n" $0); next } /\[WIP\]/ && !done { sub(/\[WIP\]/, desc); done=1 } 1' description.txt done=0 RELEASE_NOTES.txt > tmpfile && mv tmpfile RELEASE_NOTES.txt
-          awk 'NR==FNR { desc = (desc == "" ? $0 : desc "\n" $0); next } /\[WIP\]/ && !done { sub(/\[WIP\]/, desc); done=1 } 1' target-env.txt done=0 RELEASE_NOTES.txt > tmpfile && mv tmpfile RELEASE_NOTES.txt
-          awk 'NR==FNR { desc = (desc == "" ? $0 : desc "\n" $0); next } /\[WIP\]/ && !done { sub(/\[WIP\]/, desc); done=1 } 1' known-issues.txt done=0 RELEASE_NOTES.txt > tmpfile && mv tmpfile RELEASE_NOTES.txt
+          awk 'NR==FNR { desc = (desc == "" ? $0 : desc "\n" $0); next } /\[WIP\]/ && !done { sub(/\[WIP\]/, desc); done=1 } 1' description.txt done=0 RELEASE_NOTES.txt
+          awk 'NR==FNR { desc = (desc == "" ? $0 : desc "\n" $0); next } /\[WIP\]/ && !done { sub(/\[WIP\]/, desc); done=1 } 1' target-env.txt done=0 RELEASE_NOTES.txt
+          awk 'NR==FNR { desc = (desc == "" ? $0 : desc "\n" $0); next } /\[WIP\]/ && !done { sub(/\[WIP\]/, desc); done=1 } 1' known-issues.txt done=0 RELEASE_NOTES.txt
       shell: bash
         
     - name: Files exist clean up
       id: clean-up-files
-      if: steps.check_files.outputs.exists == 'true'
+      if: steps.check_files.outputs.exists == 'true' && github.event.inputs.overwrite == false
       # Only runs if all of the files exist
       run: |
         rm description.txt
