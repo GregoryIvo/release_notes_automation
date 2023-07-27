@@ -81,7 +81,7 @@ jobs:
         
     - name: Files exist clean up
       id: clean-up-files
-      if: steps.check_files.outputs.exists == 'true'
+      if: steps.check_files.outputs.exists == 'true' && github.event.inputs.overwrite == false
       # Only runs if all of the files exist
       run: |
         rm description.txt
