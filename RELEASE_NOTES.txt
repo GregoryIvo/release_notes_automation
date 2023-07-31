@@ -1,0 +1,58 @@
+Project Name - 1.0.1 - July 2023
+-------------------------------------------------------------------------------------------------
+Description:
+[WIP]
+
+
+Features:
+  * 9ab6bbb516 - final version of workflow (G_Ivo)
+  * a321d9dd78 - fixed release notes (G_Ivo)
+  * af72cc5d04 - release note WIP persistence (G_Ivo)
+  * 9313b50b53 - first time setup workflow (#56) (Mattia Dal Ben)
+  * 9c4f221c05 - update release notes action dependency (Mattia Dal Ben)
+
+Target Environments:
+[WIP]
+
+Bug Fixes:
+  * 3a2700fb4e - added continue-on-error: true (G_Ivo)
+  * b273674411 - replace sed with awk (G_Ivo)
+  * e98773550c - escaping on characters (G_Ivo)
+  * 7731a4af64 - formatting workflow (G_Ivo)
+  * aa98e48300 - corrected file check (G_Ivo)
+  * 05b8beab56 - forgotten line (Mattia Dal Ben)
+
+Target Platform Updates:
+  * 3d306bb8a1 - add pom.xml (Mattia Dal Ben)
+
+Known Issues:
+[WIP]
+
+Changelog:
+  * 3a2700fb4e - added continue-on-error: true (G_Ivo)
+  * 9ab6bbb516 - final version of workflow (G_Ivo)
+  * a321d9dd78 - fixed release notes (G_Ivo)
+  * b273674411 - replace sed with awk (G_Ivo)
+  * aeaf15a87b -  (G_Ivo)
+  * 9eeb61f4e6 - fix multi run (G_Ivo)
+  * e98773550c - escaping on characters (G_Ivo)
+  * 7731a4af64 - formatting workflow (G_Ivo)
+  * aa98e48300 - corrected file check (G_Ivo)
+  * af72cc5d04 - release note WIP persistence (G_Ivo)
+  * 73404b94d8 - update release notes workflow (Mattia Dal Ben)
+  * 3d306bb8a1 - add pom.xml (Mattia Dal Ben)
+  * 87506a922a -  (Mattia Dal Ben)
+  * c8ea42615d -  (Mattia Dal Ben)
+  * 05b8beab56 - forgotten line (Mattia Dal Ben)
+  * 1bf97d02ed - remove parameter (Mattia Dal Ben)
+  * 110b207544 - update first time setup workflow (Mattia Dal Ben)
+  * 9313b50b53 - first time setup workflow (#56) (Mattia Dal Ben)
+  * cb94b7a718 - remove obsolete reusable workflow call (Mattia Dal Ben)
+  * df1ee02e55 - fix path (Mattia Dal Ben)
+  * 35e7212d64 - avoid using action for retrieving version info (Mattia Dal Ben)
+  * 107e5811fb - add reusable workflow demo (Mattia Dal Ben)
+  * 8f582be2cd - improve information given by Release Notes action (Mattia Dal Ben)
+  * 9c4f221c05 - update release notes action dependency (Mattia Dal Ben)
+  * e4ba345cd1 - add note in readme (#50) (Mattia Dal Ben)
+  * db445698e4 - updated path to pom.xml (Mattia Dal Ben)
+  * ac91e86ee7 - moved root pom (Mattia Dal Ben)
